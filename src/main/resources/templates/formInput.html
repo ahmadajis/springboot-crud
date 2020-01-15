@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Form Input Data Mahasiswa </title>
+
+    <!-- Bootstrap core CSS -->
+
+    <!--    <link rel="stylesheet" th:href="@{/asset/css/bootstrap.min.css}">-->
+    <!-- Bootstrap cdn CSS -->
+    <link rel="stylesheet" th:href="@{//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css}">
+
+</head>
+<body>
+
+<br>
+<h3 class="align-content-center text-center">CRUD SPRING BOOT FRAMEWORK </h3>
+<div class="container">
+    <form action="" th:object="${mahasiswa}" th:action="@{/formInput/create}" method="post">
+        <div class="form-group">
+            <input type="hidden" class="form-control" id="inputId" placeholder="23" th:field="*{id}">
+            <input type="hidden" class="form-control" id="inputId" placeholder="23" th:field="*{version}">
+        </div>
+        <div class="form-group">
+            <label for="inputNama">Nama</label>
+            <input type="text" class="form-control" id="inputNama" placeholder="Bambang Wijatmiko" th:field="*{nama}">
+        </div>
+        <div class="form-group">
+            <label for="inputJurusan">Jurusan</label>
+            <input type="text" class="form-control" id="inputJurusan" placeholder="Accounting" th:field="*{jurusan}">
+        </div>
+        <div class="form-group">
+            <label for="inputNim">nim</label>
+            <input type="text" class="form-control" id="inputNim" placeholder="12568931" th:field="*{nim}">
+        </div>
+        <button type="submit" class="btn btn-info float-right">Simpan</button>
+        <br>
+    </form>
+
+</div>
+</body>
+</html>

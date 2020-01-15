@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Springboot Bootstrap </title>
+
+    <!-- Bootstrap core CSS -->
+    <!--    <link rel="stylesheet" th:href="@{asset/css/bootstrap.min.css}">-->
+    <link rel="stylesheet" th:href="@{asset/css/starter-template.css}">
+    <!-- Bootstrap cdn CSS -->
+    <link rel="stylesheet" th:href="@{//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css}">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark justify-content-center">
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#"> <h3>CRUD WITH SPRING BOOT FRAMEWORK JAVA</h3> </a>
+        </li>
+    </ul>
+
+</nav>
+
+<div class="container">
+    <br><br>
+</div>
+<br>
+<h3 class="align-content-center text-center">Data Mahasiswa </h3>
+<br> <br>
+<div class="container">
+
+    <div th:if="${not #lists.isEmpty(mahasiswa)}">
+
+        <table class="table table-striped">
+            <tr>
+                <!--  <th>ID</th>-->
+                <th>Nama</th>
+                <th>Jurusan</th>
+                <th>NIM</th>
+                <th>Action</th>
+            </tr>
+
+            <tr th:each="mahasiswa : ${mahasiswa}">
+                <!-- <td th:text="${mahasiswa.id}"></td>-->
+                <td th:text="${mahasiswa.nama}"></td>
+                <td th:text="${mahasiswa.jurusan}"></td>
+                <td th:text="${mahasiswa.nim}"></td>
+                <td>
+                    <a th:href="${'/formEdit/edit/' + mahasiswa.id}"> <span class="btn btn-primary"> Edit </span></a>
+                    <a th:href="${'/mahasiswa/hapus/' + mahasiswa.id}"> <span class="btn btn-danger"> Hapus </span></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<br>
+<div class="container">
+    <a class="btn btn-info float-right" href="/formInput/create" role="button">Tambah Mahasiswa </a>
+</div>
+</body>
+</html>
