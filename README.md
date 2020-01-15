@@ -1,5 +1,6 @@
 # springboot-crud
 Springboot CRUD dengan Menggunakan Hibernate 
 
-https://github.com/ahmadajis/springboot-crud.git
-![alt text](https://github.com/ahmadajis/Walpaper/blob/master/Walpaper%20Png/Walpaper%20upload-01.png)
+git clone https://github.com/ahmadajis/springboot-crud.git
+
+![alt text](https://github.com/ahmadajis/springboot-crud/blob/master/src/main/resources/static/asset/img/screen-shoot.PNG)
